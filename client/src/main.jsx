@@ -9,21 +9,21 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const customChain = {
-  chainId: 296,
-  rpc: ["https://testnet.hashio.io/api"],
+  chainId: 11155111,
+  rpc: ["https://sepolia.hashio.io/api"],
   nativeCurrency: {
     decimals: 18,
-    name: "Hedera",
-    symbol: "HBAR",
+    name: "Sepolia",
+    symbol: "SEPOL",
   },
-  shortName: "HBAR", 
-  slug: "HBAR", 
+  shortName: "SEPOL", 
+  slug: "SEPOL", 
   testnet: true,
-  chain: "Hedera Testnet", 
-  name: "Hedera Testnet",
+  chain: "Sepolia Testnet", 
+  name: "Sepolia Testnet",
 };
 root.render(
-  <ThirdwebProvider activeChain={customChain} clientId="94ee5b973ae3c4ed3c2c43f5e77dc031" desiredChainId={ChainId.Hedera}> 
+  <ThirdwebProvider activeChain={customChainSepolia} clientId="94ee5b973ae3c4ed3c2c43f5e77dc031" desiredChainId={ChainId.Sepolia}> 
     <Router>
       <StateContextProvider>
         <App />
@@ -31,3 +31,6 @@ root.render(
     </Router>
   </ThirdwebProvider> 
 )
+
+
+
